@@ -59,9 +59,9 @@ export const PORTFOLIO_DATA = {
     ],
     socialLinks: {
       github: "https://github.com/samarthkul6579",
-      linkedin: "https://linkedin.com/in/[your-linkedin-username]", // Placeholder until user provides username
-      email: "contact@[your-confirmed-email].com", // Placeholder until confirmed email is provided
-      resume: "#contact", // Available on request or placeholder
+      linkedin: "https://www.linkedin.com/in/samarthkul6579/",
+      email: "samarthkul6579@gmail.com",
+      resume: "#contact", // Available on request
     },
     quickStats: [
       { label: "Role", value: "Frontend Developer" },
