@@ -69,33 +69,33 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 relative border-t border-white/5 overflow-hidden">
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 relative border-t border-white/5 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+        <div className="flex flex-col items-center text-center mb-14 sm:mb-20">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/25 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3.5 shadow-sm shadow-sky-500/10">
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Communication</span>
+            <span>Direct Inquiries</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-4">
-            Get In Touch
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+            Let&apos;s Build Something Great
           </h2>
           <p className="text-slate-400 max-w-xl text-xs sm:text-sm md:text-base leading-relaxed">
-            Have a question, frontend opportunity, or project inquiry? Reach out via email or connect on professional platforms.
+            Have a project, frontend engineering opportunity, or collaboration in mind? Reach out directly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-9 items-start">
           {/* Direct Communication Channels (Left) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-5 flex flex-col gap-3.5 sm:gap-4 w-full"
+            className="lg:col-span-5 flex flex-col gap-4 w-full"
           >
             {/* Email Card with Copy */}
-            <div className="glass-panel p-4 sm:p-6 rounded-2xl border border-white/10">
+            <div className="glass-panel p-6 sm:p-7 rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all shadow-xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2.5 rounded-xl bg-sky-500/10 text-sky-400 border border-sky-500/20 shrink-0">
                   <Mail className="w-5 h-5" />
@@ -180,9 +180,9 @@ export const Contact: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-7 glass-panel p-4 sm:p-8 rounded-2xl border border-white/10 w-full"
+            className="lg:col-span-7 glass-panel p-6 sm:p-9 rounded-3xl border border-white/10 hover:border-sky-500/30 transition-all shadow-xl w-full"
           >
             <div className="mb-5 sm:mb-6">
               <h3 className="text-base sm:text-lg font-bold text-white mb-1">Compose a Message</h3>

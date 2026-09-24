@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #070a13;
-  --foreground: #f1f5f9;
-  --card-bg: rgba(13, 19, 33, 0.7);
+  --background: #05070d;
+  --foreground: #f8fafc;
+  --card-bg: rgba(11, 17, 32, 0.75);
   --card-border: rgba(255, 255, 255, 0.08);
-  --card-border-hover: rgba(56, 189, 248, 0.3);
+  --card-border-hover: rgba(56, 189, 248, 0.35);
   --primary-accent: #38bdf8;
   --secondary-accent: #818cf8;
 }
@@ -17,9 +17,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -47,7 +45,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070a13;
+  background: #05070d;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -56,43 +54,45 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #38bdf8;
 }
 
-/* Ambient mesh background */
+/* Luxury ambient background with glowing radial meshes */
 .ambient-bg {
-  background:
-    radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 85% 25%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 50% 75%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
-    #070a13;
+  background: 
+    radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 60%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, rgba(168, 85, 247, 0.08) 0%, transparent 45%),
+    #05070d;
 }
 
-/* Glassmorphism surfaces */
+/* Ultra-premium glassmorphism surfaces */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 20, 36, 0.68);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 .glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .glass-panel-hover:hover {
-    border-color: rgba(56, 189, 248, 0.35);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.12);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.2), inset 0 1px 2px 0 rgba(255, 255, 255, 0.12);
   }
 }
 
-/* Bulletproof Hero Animations (Runs immediately, never gets stuck at opacity 0) */
+/* Bulletproof Hero Animations */
 @keyframes heroFadeUp {
   0% {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -103,11 +103,29 @@ body {
 @keyframes heroScaleIn {
   0% {
     opacity: 0;
-    transform: scale(0.97);
+    transform: scale(0.96);
   }
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
@@ -119,9 +137,14 @@ body {
   animation: heroScaleIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-hero-fade,
-  .animate-hero-delayed {
+  .animate-hero-delayed,
+  .animate-float {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -130,8 +153,8 @@ body {
 
 /* Subtle tech grid background */
 .tech-grid {
-  background-size: 32px 32px;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }
