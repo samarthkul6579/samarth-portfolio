@@ -78,7 +78,9 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    const web3formsKey =
+      process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+      "1d5d26f4-9bc7-4a3e-b149-cba55f716455";
 
     // If Web3Forms Access Key is provided in environment variables, submit directly in background
     if (web3formsKey && web3formsKey !== "YOUR_ACCESS_KEY_HERE") {
