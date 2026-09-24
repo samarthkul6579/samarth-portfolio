@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   ArrowDown,
   FolderGit2,
@@ -23,12 +22,7 @@ export const Hero: React.FC = () => {
     >
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Introduction & CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-7 flex flex-col items-start w-full"
-        >
+        <div className="lg:col-span-7 flex flex-col items-start w-full animate-hero-fade">
           {/* Status / Role Badge */}
           <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium mb-5 max-w-full">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
@@ -105,15 +99,10 @@ export const Hero: React.FC = () => {
               <span>Email</span>
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Column: Code & Architecture Showcase Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-5 w-full"
-        >
+        <div className="lg:col-span-5 w-full animate-hero-delayed">
           <div className="relative rounded-2xl glass-panel p-4 sm:p-5 border border-white/10 shadow-2xl shadow-black/50 overflow-hidden w-full">
             {/* Top decorative window bar */}
             <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-white/5">
@@ -199,7 +188,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll Hint */}
