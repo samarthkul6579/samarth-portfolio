@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
               {/* Image Container with Gradient Fade Overlay */}
               <div className="relative w-full aspect-[3.2/4] rounded-[22px] overflow-hidden bg-slate-950">
                 <Image
-                  src="/samarth.jpg"
+                  src="/samarth-portrait.jpg"
                   alt="Samarth Kulshreshtha - Frontend Developer"
                   fill
                   priority
